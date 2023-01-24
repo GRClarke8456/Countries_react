@@ -1,4 +1,3 @@
-import Country from "../components/Country";
 import CountryList from "../components/CountryList";
 import { useEffect, useState } from "react";
 
