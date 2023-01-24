@@ -1,9 +1,10 @@
 import Country from "../components/Country";
+import CountryList from "../components/CountryList";
 import { useEffect, useState } from "react";
 
 const CountryContainer = () => {
 
-    const [countries, setCountries] = useState(null);
+    const [countries, setCountries] = useState("");
 
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all")
@@ -12,8 +13,8 @@ const CountryContainer = () => {
     },[])
 
     return (
-        // country ? <Country country = {country}/> : <p>Loading country...</p>
-        <CountryList countries={countries}/>
+        countries ? <CountryList countries = {countries}/> : <p>Loading country...</p>
+        // <CountryList countries={countries}/>
     )
 
 }

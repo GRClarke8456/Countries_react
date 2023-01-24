@@ -1,4 +1,4 @@
-const Country = ({country}) => {
+const Country = ({countryInfo}) => {
 
     return (
 
@@ -8,7 +8,7 @@ const Country = ({country}) => {
 
 
         <>
-          <h1>This is a component</h1>      
+          <h2 className="country_title">{countryInfo.name.common}</h2>      
         </>
     )
 }
